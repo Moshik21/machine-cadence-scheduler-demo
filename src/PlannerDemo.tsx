@@ -37,6 +37,8 @@ import {
   type ScheduledEntry,
 } from './demo-scheduler'
 
+const SOURCE_REPO_URL = 'https://github.com/Moshik21/machine-cadence-scheduler-demo'
+
 function cx(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(' ')
 }
@@ -146,11 +148,11 @@ export default function PlannerDemo() {
         <div className="mx-auto flex min-w-0 max-w-7xl flex-col gap-3 px-4 py-3 sm:px-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex items-center gap-3">
             <a
-              href="https://github.com/Moshik21"
+              href={SOURCE_REPO_URL}
               target="_blank"
               rel="noreferrer"
               className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gray-200/70 bg-white/80 text-gray-600 shadow-dawn-sm transition-colors hover:text-cyan-700 dark:border-gray-800 dark:bg-gray-900/80 dark:text-gray-300 dark:hover:text-cyan-300"
-              aria-label="Open GitHub profile"
+              aria-label="Open source repository"
             >
               <Github className="h-4 w-4" />
             </a>
@@ -170,6 +172,15 @@ export default function PlannerDemo() {
               label="No real shop data"
               tone="cyan"
             />
+            <a
+              href={SOURCE_REPO_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-gray-300/70 bg-white/80 px-3.5 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-gray-700 transition-all hover:-translate-y-px hover:bg-gray-50 hover:text-gray-950 dark:border-gray-700 dark:bg-gray-900/80 dark:text-gray-200 dark:hover:bg-gray-800"
+            >
+              <Github className="h-3.5 w-3.5" />
+              View source
+            </a>
             <button
               type="button"
               onClick={replayScenario}
